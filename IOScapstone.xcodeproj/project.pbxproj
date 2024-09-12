@@ -19,6 +19,10 @@
 		80A7944F2C920CA70062FC9D /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A7944E2C920CA70062FC9D /* Home.swift */; };
 		80A794512C920CE50062FC9D /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A794502C920CE50062FC9D /* Menu.swift */; };
 		80A794532C9349BC0062FC9D /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A794522C9349BC0062FC9D /* UserProfile.swift */; };
+		80A794552C93600A0062FC9D /* FetchedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A794542C93600A0062FC9D /* FetchedObjects.swift */; };
+		80A794572C9365450062FC9D /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A794562C9365450062FC9D /* MenuList.swift */; };
+		80A794592C9365570062FC9D /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A794582C9365570062FC9D /* MenuItem.swift */; };
+		80ECE01C2C938A370021A512 /* ExampleDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80ECE01A2C938A370021A512 /* ExampleDatabase.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,10 @@
 		80A7944E2C920CA70062FC9D /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		80A794502C920CE50062FC9D /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		80A794522C9349BC0062FC9D /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		80A794542C93600A0062FC9D /* FetchedObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedObjects.swift; sourceTree = "<group>"; };
+		80A794562C9365450062FC9D /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
+		80A794582C9365570062FC9D /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		80ECE01B2C938A370021A512 /* ExampleDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleDatabase.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,10 @@
 				80A794522C9349BC0062FC9D /* UserProfile.swift */,
 				80A7944E2C920CA70062FC9D /* Home.swift */,
 				80A794502C920CE50062FC9D /* Menu.swift */,
+				80ECE01A2C938A370021A512 /* ExampleDatabase.xcdatamodeld */,
+				80A794562C9365450062FC9D /* MenuList.swift */,
+				80A794582C9365570062FC9D /* MenuItem.swift */,
+				80A794542C93600A0062FC9D /* FetchedObjects.swift */,
 				80A794212C909A360062FC9D /* Assets.xcassets */,
 				80A794262C909A360062FC9D /* Persistence.swift */,
 				80A794282C909A360062FC9D /* IOScapstone.xcdatamodeld */,
@@ -272,13 +284,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80ECE01C2C938A370021A512 /* ExampleDatabase.xcdatamodeld in Sources */,
 				80A794512C920CE50062FC9D /* Menu.swift in Sources */,
 				80A7942A2C909A360062FC9D /* IOScapstone.xcdatamodeld in Sources */,
 				80A794532C9349BC0062FC9D /* UserProfile.swift in Sources */,
 				80A794272C909A360062FC9D /* Persistence.swift in Sources */,
+				80A794552C93600A0062FC9D /* FetchedObjects.swift in Sources */,
 				80A7944F2C920CA70062FC9D /* Home.swift in Sources */,
 				80A7944D2C90E4C20062FC9D /* Onboarding.swift in Sources */,
+				80A794572C9365450062FC9D /* MenuList.swift in Sources */,
 				80A7941E2C909A330062FC9D /* IOScapstoneApp.swift in Sources */,
+				80A794592C9365570062FC9D /* MenuItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,6 +627,17 @@
 			);
 			currentVersion = 80A794292C909A360062FC9D /* IOScapstone.xcdatamodel */;
 			path = IOScapstone.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		80ECE01A2C938A370021A512 /* ExampleDatabase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				80ECE01B2C938A370021A512 /* ExampleDatabase.xcdatamodel */,
+			);
+			currentVersion = 80ECE01B2C938A370021A512 /* ExampleDatabase.xcdatamodel */;
+			name = ExampleDatabase.xcdatamodeld;
+			path = /Users/archerbergmann/Desktop/portoflio/IOScapstone/IOScapstone/ExampleDatabase.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
