@@ -53,4 +53,15 @@ struct PersistenceController {
         })
         container.viewContext.automaticallyMergesChangesFromParent = true
     }
+    func clear() {
+            let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Dish.fetchRequest()
+            let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+            
+            do {
+                try container.viewContext.execute(deleteRequest)
+                try container.viewContext.save()
+            } catch {
+                print("Failed to clear Core Data: \(error)")
+            }
+        }
 }

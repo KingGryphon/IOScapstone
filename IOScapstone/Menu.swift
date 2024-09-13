@@ -51,6 +51,7 @@ struct Menu: View {
         }}
     func getMenuData() async {
         
+        PersistenceController.shared.clear()
         
         let serverURLString = "https://raw.githubusercontent.com/Meta-Mobile-Developer-PC/Working-With-Data-API/main/menu.json"
         
@@ -64,31 +65,29 @@ struct Menu: View {
         do {
             let (data, response) = try await URLSession.shared.data(for: request)
             
-            if let data = data {
-                let decoder = JSONDecoder()
+            
+            let decoder = JSONDecoder()
                 
-                if let menuList = try? decoder.decode(MenuList.self, from: data)
-                    for item in MenuList.menu {
+            if let menuList = try? decoder.decode(MenuList.self, from: data) {
+                for item in menuList.menu {
                     let dish = Dish(context: viewContext)
                     dish.title = item.title
                     dish.image = item.image
-                    dish.price = item.price
+                    dish.price = item.price}
                     
-                    do {
-                        try viewContext.save()
-                    } catch {
-                        print("Failed to save dish: \(error)")
+                do {
+                    try viewContext.save()
+                } catch {
+                    print("Failed to save dish: \(error)")
                     }
                 }
-            } else {
-                print("Failed to decode data")
-            }
+            
+            
         } catch {
             print("error fetching or decoding data: \(error)")
            
             
-        } catch {
-            print("Error fetching or decoding data: \(error)")
+        
         }
     }
 }
